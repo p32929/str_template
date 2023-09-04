@@ -1,0 +1,39 @@
+{
+  "name": "str_template",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "description": "A fast and simple string templating library, written in TypeScript",
+  "types": "lib/index.d.ts",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.11.10",
+    "jest": "^29.5.0",
+    "nodemon": "^3.0.1",
+    "ts-jest": "^29.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config jestconfig.json",
+    "test:watch": "jest --config jestconfig.json --watchAll",
+    "main": "nodemon ./src/main.ts",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/index.d.ts"
+  ],
+  "homepage": "https://github.com/p32929/fjsondb",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/p32929/fjsondb.git"
+  },
+  "keywords": [
+    "simple",
+    "fast",
+    "easy"
+  ],
+  "author": "p32929"
+}
