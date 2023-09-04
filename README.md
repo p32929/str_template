@@ -4,13 +4,13 @@ A fast and simple string templating library, written in TypeScript ( Supports bo
 # Installation
 
 ```
-npm install str_template
+npm install str-template-ts
 ```
 
 or
 
 ```
-yarn add str_template
+yarn add str-template-ts
 ```
 
 # Usage
