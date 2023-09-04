@@ -33,7 +33,11 @@
   "keywords": [
     "simple",
     "fast",
-    "easy"
+    "easy",
+    "string",
+    "template",
+    "typescript",
+    "nodejs"
   ],
   "author": "p32929"
 }

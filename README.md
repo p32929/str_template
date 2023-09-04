@@ -1,5 +1,5 @@
 # str_template
-A fast and simple string templating library, written in TypeScript
+A fast and simple string templating library, written in TypeScript ( Supports both Client side and Server side JavaScript / TypeScript )
 
 # Installation
 
