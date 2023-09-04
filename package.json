@@ -1,5 +1,5 @@
 {
-  "name": "str_template",
+  "name": "str-template-ts",
   "version": "0.0.1",
   "license": "MIT",
   "main": "lib/index.js",
