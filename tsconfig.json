@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es2018",
+    "target": "es5",
     "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "strictNullChecks": false,
+    "declaration": true,
+    "outDir": "./lib",
+    "strict": true,
     "noImplicitAny": false,
-    "lib": ["ES2021.String", "dom"]
+    "strictNullChecks": false,
+    "lib": ["es2021"]
   },
-  "exclude": ["./node_modules"]
+  "include": ["src"],
+  "exclude": ["node_modules", "**/__tests__/*"]
 }
