@@ -15,7 +15,7 @@ yarn add str_template
 
 # Usage
 ### Example-1
-By default, the separator is {}
+By default, the separator is `{}`
 
 ```
 const yourString = `Hello {name1}, How is {name2}?`
