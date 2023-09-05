@@ -1,6 +1,6 @@
 {
   "name": "str-template-ts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "lib/index.js",
   "description": "A fast and simple string templating library, written in TypeScript",
@@ -25,10 +25,10 @@
     "lib/index.js",
     "lib/index.d.ts"
   ],
-  "homepage": "https://github.com/p32929/fjsondb",
+  "homepage": "https://github.com/p32929/str_template",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/p32929/fjsondb.git"
+    "url": "git+https://github.com/p32929/str_template.git"
   },
   "keywords": [
     "simple",

@@ -38,6 +38,13 @@ const finalString = StrTemplate.format(yourString, {
 console.log(finalString) // Hello Fayaz, How is Farhaz?
 ```
 
+# Changelogs
+### 0.0.2
+Fixed github URL in package JSON ( for npm )
+
+### 0.0.1
+Initial release
+
 ## License
 
 ```
