@@ -1,10 +1,17 @@
 # str_template
 
-A fast, tiny string templating library written in TypeScript. Fill `{placeholders}` in a string from an object — works the same in Node and in the browser, with a configurable delimiter.
+A tiny string templating library for TypeScript and JavaScript. Write `Hello {name}` once and fill it from an object, in Node or in the browser. It has **no runtime dependencies**, so it adds nothing else to your app and no supply chain to worry about.
 
 On npm: **[str-template-ts](https://www.npmjs.com/package/str-template-ts)**
 
-## Installation
+## Features
+
+1. **Fill `{placeholders}` from an object** with one call.
+2. **Pick your own delimiter,** like `[[name]]` or `*#name#*`, when your text already uses curly braces.
+3. **Every match is replaced,** not just the first one.
+4. **Typed:** written in TypeScript and ships its own types.
+
+## Install
 
 ```bash
 npm install str-template-ts
@@ -12,37 +19,30 @@ npm install str-template-ts
 yarn add str-template-ts
 ```
 
-## Usage
-### Example-1
-By default, the separator is `{}`
+## Use it
 
 ```ts
-const yourString = `Hello {name1}, How is {name2}?`
-const finalString = StrTemplate.format(yourString, {
-    name1: "Fayaz",
-    name2: "Farhaz"
-})
-console.log(finalString) // Hello Fayaz, How is Farhaz?
+import { StrTemplate } from "str-template-ts"
+
+const text = `Hello {name1}, How is {name2}?`
+StrTemplate.format(text, { name1: "Fayaz", name2: "Farhaz" })
+// Hello Fayaz, How is Farhaz?
 ```
 
-### Example-2
-You can change the separator if you want to ( The separator must contain even number of characters and should NOT be empty )
+With your own delimiter. It must not be empty and must have an even number of characters, so it can be split into an opening and a closing half:
 
 ```ts
-const yourString = `Hello [[name1]], How is [[name2]]?`
-const finalString = StrTemplate.format(yourString, {
-    name1: "Fayaz",
-    name2: "Farhaz"
-}, "[[]]")
-console.log(finalString) // Hello Fayaz, How is Farhaz?
+const text = `Hello [[name1]], How is [[name2]]?`
+StrTemplate.format(text, { name1: "Fayaz", name2: "Farhaz" }, "[[]]")
+// Hello Fayaz, How is Farhaz?
 ```
+
+It uses `String.replaceAll`, so it needs Node 15 or newer, or a modern browser.
 
 ## Changelog
-### 0.0.2
-Fixed github URL in package JSON ( for npm )
 
-### 0.0.1
-Initial release
+1. **0.0.2:** fixed the GitHub link in `package.json` for npm.
+2. **0.0.1:** first release.
 
 ## License
 
@@ -50,26 +50,12 @@ MIT License — Copyright (c) Fayaz Bin Salam. See [LICENSE](LICENSE) for the fu
 
 ## Contributing
 
-Contributions are warmly welcomed and greatly appreciated! Whether it's a bug fix, new feature, or improvement, your input helps make this project better for everyone.
-
-Before submitting a pull request, please:
-
-1. Create an issue describing the feature or bug fix you'd like to work on
-2. Wait for discussion and approval to ensure alignment with project goals
-3. Fork the repository and create your feature branch
-4. Submit your pull request with a clear description of changes
-
-This approach helps avoid duplicate efforts and ensures smooth collaboration. Thank you for considering contributing!
+Contributions are very welcome, thank you! Before you start on a pull request, please open an issue and tell me what you would like to add or change. That way we can agree on it first, and your time is not wasted on something that might not fit. Thanks for helping make str_template better.
 
 ## Share
 
-Sharing this repository with your friends is just one click away from here
+<a href="https://p32929.github.io/share/?repo=str_template"><img src="https://p32929.github.io/readme/share.svg" alt="Share this with your friends in just a click" width="420"></a>
 
-[![facebook](https://user-images.githubusercontent.com/6418354/179013321-ac1d1452-0689-493f-9066-940cf2302b6e.png)](https://www.facebook.com/sharer/sharer.php?u=https://github.com/p32929/str_template/)
-[![twitter](https://user-images.githubusercontent.com/6418354/179013351-7d8d6d1c-4ce2-46ab-bef8-4c4765a1b888.png)](https://twitter.com/intent/tweet?url=https://github.com/p32929/str_template/)
-[![tumblr](https://user-images.githubusercontent.com/6418354/179013343-3111f55a-3b90-40c7-8487-9777348672b0.png)](https://www.tumblr.com/share?v=3&u=https://github.com/p32929/str_template/)
-[![pocket](https://user-images.githubusercontent.com/6418354/179013334-b095c45f-becf-49f4-9ee1-5a731a9b1f85.png)](https://getpocket.com/save?url=https://github.com/p32929/str_template/)
-[![pinterest](https://user-images.githubusercontent.com/6418354/179013331-44cd9206-11b1-4b65-becb-5863b61c828f.png)](https://pinterest.com/pin/create/button/?url=https://github.com/p32929/str_template/)
-[![reddit](https://user-images.githubusercontent.com/6418354/179013338-7416ae3f-73ba-4522-86e1-1374d7082d22.png)](https://www.reddit.com/submit?url=https://github.com/p32929/str_template/)
-[![linkedin](https://user-images.githubusercontent.com/6418354/179013327-ca7b7102-1da8-4b1c-858f-1a6e5f21bd70.png)](https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/p32929/str_template/)
-[![whatsapp](https://user-images.githubusercontent.com/6418354/179013353-f477fa0b-3e6f-4138-a357-c9991b23ff88.png)](https://api.whatsapp.com/send?text=https://github.com/p32929/str_template/)
+## Support
+
+<a href="https://p32929.github.io/support/"><img src="https://p32929.github.io/readme/support.svg" alt="If you like my works and want to support me, feel free to support" width="420"></a>
